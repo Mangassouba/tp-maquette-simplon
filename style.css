@@ -79,7 +79,7 @@ header .header form button{
 
 /* histoire fabrique */
 #histoire-fabrique{
-    background-color: var(--grag);
+    background-color: var(--gragWhite);
     height:800px;
 }
 .titre{
