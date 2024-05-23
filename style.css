@@ -1,0 +1,794 @@
+:root{
+    --danger :#cb0837;
+    --white : #ffffff;
+    --dark : #000;
+    --grag : #9c9c9c;
+    --gragWhite : #faf9f9;
+    --pinkpale : #dc5a7a;
+    --pinkpaleWhite : #efbcc8;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif,serif;
+    
+}
+body{
+    overflow-x: hidden;
+}
+
+/* header */
+header{
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 1px var(--grag);
+}
+
+header .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: var(--white);
+}
+header .header img{
+    width: 200px;
+}
+header .header nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .header nav ul li{
+    margin: 0 20px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85px;
+}
+header .header nav ul li:hover{
+    border-bottom: 3px solid var(--danger);
+    color: var(--danger);
+    
+}
+header .header nav ul li a{
+    text-decoration: none;
+}
+/* header .header nav ul li a :hover{
+    color: var(--danger);
+} */
+header .header nav ul li a img{
+    width: 20px;
+}
+header .header form select{
+    border: none;
+}
+header .header form button{
+    padding: 10px 25px;
+    border-radius: 20px;
+    background-color: var(--danger);
+    color:var(--white);
+    font-weight:bold;
+    font-size: 1em;
+}
+
+/* histoire fabrique */
+#histoire-fabrique{
+    background-color: var(--grag);
+    height:800px;
+}
+.titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--danger);
+    padding: 20px;
+    font-size: 3em;
+}
+.histoires{
+    display: flex;
+    margin-top:40px ;
+    height: 400px;
+}
+.histoires .left{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.histoires .left .titre-left{
+    width: 80%;
+    background-color: var(--danger);
+    border-radius:0 0 100px 0; 
+    box-shadow: 0 15px var(--pinkpale),0 30px var(--pinkpaleWhite);
+    padding: 20px 30px;
+}
+.histoires .left .titre-left p{
+    font-size: 2.5em;
+    color: var(--white);
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.histoires .left .titre-left h2{
+    display: flex;
+    justify-content: end;
+    color: var(--white);
+    font-size: 4em;
+    font-weight: bold;
+}
+.histoires .right{
+    width: 50%;
+    position: relative;
+}
+.histoires .right .histor2{
+    text-align: center;
+    height: 200px;
+    line-height: 2;
+}
+.histoires .right .histor1{
+    position: absolute;
+    width: 70%;
+    height: 410px;
+    top: 15%;
+    background-color: var(--danger);
+    transform: rotate(5deg); 
+    border-radius: 20px;
+    box-shadow: 0 0  10px var(--dark);
+     -webkit-transform-origin: 100% 100%;
+  /* -ms-transform-origin: 100% 100%; */
+  /* transform-origin: 100% 50%; */
+}
+.histoires .right .histor2 p{
+    /* padding: 20px 10px; */
+    left: 40px;
+    position: absolute;
+    background-color: var(--white);
+    width: 70%;
+    border-radius: 20px;
+    padding: 30px 0;
+    top: 15%;
+}
+.histoires .right .histor2 span{
+    font-size: 100px;
+    /* font-weight: 00; */
+    font-family: arial;
+}
+.histoires .right .histor2 .icon1{
+    display: flex;
+    justify-content: start;
+    height: 90px;
+    color: var(--pinkpaleWhite);
+}
+.histoires .right .histor2 .icon2{
+    display: flex;
+    justify-content: end;
+    height: 80px;
+    color: var(--grag);
+}
+
+#histoire-fabrique .carouse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+#histoire-fabrique .carouse div{
+    width: 10px;
+    margin: 15px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: var(--danger);
+}
+#histoire-fabrique .carouse  .carous{
+    width: 50px;
+}
+
+/* section pédagogie */
+.petagogies{
+    width: 100%;
+    background-color: var(--white);
+    padding: 70px 0;
+}
+.petagogies h2{
+    color: var(--danger);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+.petagogies .petagogie{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 50px;
+}
+.petagogies .petagogie .left{
+    width: 50%;
+}
+.petagogies .petagogie .right{
+    width: 50%;
+}
+.petagogies .petagogie .right h3{
+    color: var(--danger);
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.petagogies .petagogie .right p{
+    line-height: 2;
+}
+.petagogies .bars{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .bar{
+    background-color: var(--danger);
+    border-radius: 50px;
+    width: 100px;
+    height: 10px;
+}
+.petagogies .petagogie1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 70px; */
+    height: 900px;
+}
+.petagogies .petagogie1 .gauch{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .petagogie1 .gauch .container{
+    width: 80%;
+}
+.petagogies .petagogie1 .gauch .container h3{
+    color: var(--danger);
+    font-size: 1.2em;
+}
+.petagogies .petagogie1 .gauch .container .gauch-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 30%);
+}
+.petagogies .petagogie1 .gauch .container .gauch-content .item{
+    margin: 15px;
+    padding: 10px;
+    border-bottom: 5px solid var(--danger);
+    box-shadow: 0 5px 5px var(--grag);
+}
+.petagogies .petagogie1 .gauch .container .gauch-content .item h4{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.petagogies .petagogie1 .gauch .container .gauch-content .item p{
+    font-size: 10px;
+}
+.petagogies .petagogie1 .droit{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+}
+.petagogies .petagogie1 .droit .droit-content1{
+    position: absolute;
+    display: flex;
+    width: 40%;
+    background-color: var(--danger);
+    height: 90%;
+    border-radius: 20px;
+    /* padding: 20px; */
+}
+/* .petagogies .petagogie1 .droit .droit-content2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+} */
+.petagogies .petagogie1 .droit img{
+    width: 40%;
+    height: 90%;
+    position: absolute;
+    transform: translate(-20px, 20px);
+    border-radius: 20px;
+}
+
+/* nos valeus */
+
+.petagogies .valeurs{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .valeurs .respect1{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.petagogies .valeurs .respect1 .respect-content{
+    width: 70%;
+}
+.petagogies .valeurs .respect1 .respect-content h3{
+    color: var(--danger);
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+.petagogies .valeurs .respect1 .respect-content p{
+    line-height: 2;
+    font-size: 15px;
+}
+.petagogies .valeurs .respect1 .respect-content button{
+    margin: 40px 0;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 30px;
+    border-radius: 20px;
+    color: var(--white);
+    background-color: var(--danger);
+}
+.petagogies .valeurs .respect2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.petagogies .valeurs .respect2 img{
+    width: 100px;
+    position: absolute;
+    left: 60px;
+    top: 110px;
+}
+.petagogies .valeurs .respect2 div{
+    width: 70%;
+}
+.petagogies .valeurs .respect2 div .respect{
+    box-shadow: 0 5px 5px var(--grag);
+    margin: 20px;
+    padding: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .valeurs .respect2 div .respect h3{
+    /* width: 20%;
+    height: 20%; */
+    border-radius: 100%;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--pinkpaleWhite);
+    color: var(--danger);
+}
+.petagogies .valeurs .respect2 div .respect div p{
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.petagogies .chiffres{
+    margin: 70px 0;
+}
+.petagogies .chiffres .chiffre{
+    margin: 50px 0;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--danger);
+    text-align: center;
+    color: var(--white);
+    
+}
+.petagogies .chiffres .chiffre .chiffre1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .chiffres .chiffre .chiffre1 .element{
+    width: 20%;
+    margin: 0 30px;
+}
+.petagogies .chiffres .chiffre .chiffre1 .element h3{
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+.petagogies .chiffres .chiffre .chiffre1 .element p{
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--gragWhite);
+}
+
+/* notre equipe */
+/* .petagogies .equipes{
+    width: 100%;
+} */
+.petagogies .equipes .titre-equipe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.petagogies .equipes .titre-equipe p{
+    width: 60%;
+    margin: 50px 0;
+}
+.petagogies .equipes .equipe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .equipes .equipe1{
+    width: 80%;
+    display: flex;
+    
+}
+.petagogies .equipes .equipe1 .item{
+    width: 60%;
+    box-shadow: 0 5px 5px 5px var(--grag);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.petagogies .equipes .equipe1 .item .profil{
+    width: 70px;
+    border-radius: 50px;
+}
+.petagogies .equipes .equipe1 .item h3{
+    margin: 20px 0;
+}
+.petagogies .equipes .equipe1 .item h4{
+    color: var(--danger);
+    font-size: 15px;
+    margin: 20px 0;
+}
+.petagogies .equipes .equipe1 .icons{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.petagogies .equipes .equipe1 .icons img{
+    width: 20px;
+    margin: 30px 5px;
+}
+.petagogies .carouse-equipe{
+    margin-top: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .carouse-equipe div{
+    background-color: var(--danger);
+    padding: 5px;
+    border-radius: 50px;margin: 10px;
+}
+.petagogies .carouse-equipe .carous{
+    width: 30px;
+}
+
+/* recrutement */
+.petagogies .recrutement{
+    margin-top: 50px;
+}
+.petagogies .recrutement .content-recrute{
+    display: flex;
+}
+.petagogies .recrutement .left{
+    margin: 70px 0;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .recrutement .left .recrut{
+    width: 80%;
+}
+.petagogies .recrutement .left .recrut img{
+    width: 100%;
+    height: 200px;
+}
+.petagogies .recrutement .left .recrut .offres{
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f9f4f4;
+    border-radius: 20px;
+}
+.petagogies .recrutement .left .recrut .offres h3{
+    color: var(--danger);
+    font-size: 2em;
+    margin: 10px 0;
+}
+.petagogies .recrutement .left .recrut .offres .postes {
+    display: flex;
+    position: relative;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste1{
+    width: 50%;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste1 p{
+    line-height: 1.5;
+    width: 90%;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste1 h3{
+    color: var(--dark);
+    font-size: 1.3em;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste1 h4{
+    color: var(--danger);
+    font-size: 1em;
+    margin: 10px 0;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste2{
+    width: 30%;
+    background-color: var(--white);
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px var(--grag);
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste2 .item{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin: 10px;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste2 img{
+    width: 20px;
+    height: 20px;
+}
+.petagogies .recrutement .left .recrut .offres .postes .poste2 p{
+    font-size: 10px;
+    margin: 0 10px;
+}
+.petagogies .recrutement .left .recrut .offres .btn{
+    margin-top: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .recrutement .left .recrut .offres button{
+    background-color: var(--danger);
+    padding: 10px 40px;
+    border-radius: 20px;
+    color: var(--white);
+    cursor: pointer;
+}
+.petagogies .recrutement .left .recrut hr{
+    background-color: var(--danger);
+}
+.petagogies .recrutement .left .recrut .offres .formateurs{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.petagogies .recrutement .left .recrut .offres .formateurs h3{
+    font-size: 1.3em;
+    color: var(--dark);
+}
+.petagogies .recrutement .left .recrut .offres .formateurs img{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: end;
+}
+.petagogies .recrutement .left .recrut .offres .lien{
+    display: flex;
+    justify-content: end;
+    padding: 20px 0;
+}
+.petagogies .recrutement .left .recrut .offres .lien a{
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+}
+.petagogies .recrutement .left .recrut .offres .lien a img{
+    width: 20px;
+    margin: 0;
+}
+
+
+.petagogies .recrutement .right{
+    width: 50%;
+    margin: 70px 0;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.petagogies .recrutement .right .right-content{
+    width: 90%;
+}
+.petagogies .recrutement .right .right-content h3{
+    color: var(--danger);
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+.petagogies .recrutement .right .right-content p{
+    line-height: 1.7;
+}
+.petagogies .recrutement .right .right-content form{
+    margin: 40px 0;
+}
+.petagogies .recrutement .right .right-content .form{
+    width: 100%;
+    margin: 20px 0;
+}
+.petagogies .recrutement .right .right-content .form input[type="text"],
+input[type="number"],input[type="email"] {
+    width: 40%;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 15px;
+}
+.petagogies .recrutement .right .right-content .form a{
+    display: flex;
+    justify-content: end;
+    margin: 0 80px;
+    color: var(--danger);
+    text-decoration: none;
+}
+.petagogies .recrutement .right .right-content .form a img{
+    width: 15px;
+    margin: 0 20pxU;
+}
+.petagogies .recrutement .right .right-content .form textarea{
+    width: 90%;
+    height: 200px;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 15px;
+}
+.petagogies .recrutement .right .right-content .form span{
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.petagogies .recrutement .right .right-content  .btn button{
+    padding: 15px 60px;
+    background-color: var(--danger);
+    color: var(--white);
+    border-radius: 30px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+/* partenaire */
+.petagogies .partenaire{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.petagogies .partenaire .nos-partenaire{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 90%;
+margin-top: 50px;
+}
+.petagogies .partenaire .nos-partenaire img{
+    width: 250px;
+    height: 30%;
+    margin: 0 40px;
+}
+.petagogies .partenaire .nos-partenaire .img{
+    width: 150px;
+}
+
+/* footer */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+}
+.footer{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.footer .item{
+    margin: 20px;
+    padding: 20px;
+}
+.footer .item .logo{
+    filter: brightness(0) invert(100%);
+}
+.footer .item .icon{
+    display: flex;
+    justify-content: center;
+}
+.footer .item .icon img{
+    width: 60px;
+    margin: 10px;
+}
+.footer .item .icon .icone{
+    width: 40px;
+}
+.footer .item img{
+    width: 200px;
+}
+.footer .item h3{
+    color: var(--gragWhite);
+    margin: 20px 0;
+    font-size: 1em;
+}
+.footer .item h2{
+    color: var(--white);
+}
+.footer .item p{
+    color: var(--grag);
+    margin: 10px 0;
+}
+.footer .item .p{
+    width: 50%;
+    line-height: 2;
+}
+.footer input[type="email"]{
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+    margin: 0;
+}
+.footer .btn{
+    margin-top: 40px;
+}
+.footer button{
+    position: absolute;
+    margin-right: 20px;
+    padding: 21px;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--danger);
+    color: var(--white);
+    margin: 0;
+}
+.footer-copy{
+    background-color: var(--danger);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+.footer-copy div{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 30px; */
+}
+.footer-copy div p{
+    font-size: 20px;
+}
+.footer-copy div p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-copy div p img{
+    width: 50px;
+    margin-top: 10px;
+}
