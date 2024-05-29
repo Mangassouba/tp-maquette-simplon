@@ -20,12 +20,14 @@ body{
 
 /* header */
 header{
+    position: fixed;
     width: 100%;
     background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 0 1px var(--grag);
+    z-index: 2;
 }
 
 header .header{
@@ -51,22 +53,36 @@ header .header nav ul li{
     align-items: center;
     height: 85px;
 }
-header .header nav ul li:hover{
+
+header .header nav ul li a{
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+}
+header .header nav ul a:hover{
     border-bottom: 3px solid var(--danger);
     color: var(--danger);
     
 }
-header .header nav ul li a{
-    text-decoration: none;
+header .header nav ul li .active{
+    border-bottom: 3px solid var(--danger);
+    color: var(--danger);
 }
 /* header .header nav ul li a :hover{
     color: var(--danger);
 } */
-header .header nav ul li a img{
+header .header nav ul li  img{
     width: 20px;
 }
 header .header form select{
     border: none;
+    color: var(--danger);
+}
+header .header form select option{
+    color: var(--dark);
 }
 header .header form button{
     padding: 10px 25px;
@@ -79,6 +95,7 @@ header .header form button{
 
 /* histoire fabrique */
 #histoire-fabrique{
+    padding-top: 120px;
     background-color: var(--gragWhite);
     height:800px;
 }
@@ -145,12 +162,13 @@ header .header form button{
   /* -ms-transform-origin: 100% 100%; */
   /* transform-origin: 100% 50%; */
 }
-.histoires .right .histor2 p{
+.histoires .right .histor2{
     /* padding: 20px 10px; */
     left: 40px;
     position: absolute;
     background-color: var(--white);
     width: 70%;
+    height: 410px;
     border-radius: 20px;
     padding: 30px 0;
     top: 15%;
@@ -162,15 +180,24 @@ header .header form button{
 }
 .histoires .right .histor2 .icon1{
     display: flex;
+    align-items: center;
     justify-content: start;
     height: 90px;
     color: var(--pinkpaleWhite);
+    font-size: 10em;
+    /* font-weight: 00; */
+    font-family: arial;
 }
 .histoires .right .histor2 .icon2{
     display: flex;
     justify-content: end;
     height: 80px;
     color: var(--grag);
+    /* margin-top: 10px; */
+    font-size: 10em;
+    /* font-weight: 00; */
+    font-family: arial;
+    margin-bottom: 20px;
 }
 
 #histoire-fabrique .carouse{
@@ -245,7 +272,7 @@ header .header form button{
     height: 900px;
 }
 .petagogies .petagogie1 .gauch{
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -255,28 +282,46 @@ header .header form button{
 }
 .petagogies .petagogie1 .gauch .container h3{
     color: var(--danger);
-    font-size: 1.2em;
+    font-size: 2.5em;
 }
 .petagogies .petagogie1 .gauch .container .gauch-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 30%);
+    grid-template-rows: repeat(3, 35%);
+    position: relative;
+    z-index: 1;
+}
+.petagogies .petagogie1 .gauch .container .gauch-content .cercle1{
+    position: absolute;
+    display: flex;
+    right: -30px;
+    top: -30px;
+    z-index: -1;
+}
+.petagogies .petagogie1 .gauch .container .gauch-content .cercle2{
+    position: absolute;
+    bottom: -70px;
+    left: -30px;
+    z-index: -2;
 }
 .petagogies .petagogie1 .gauch .container .gauch-content .item{
     margin: 15px;
-    padding: 10px;
+    padding: 20px;
+    background-color: #ffffff;
     border-bottom: 5px solid var(--danger);
     box-shadow: 0 5px 5px var(--grag);
+    position: relative;
 }
 .petagogies .petagogie1 .gauch .container .gauch-content .item h4{
     font-size: 15px;
     margin-bottom: 5px;
 }
 .petagogies .petagogie1 .gauch .container .gauch-content .item p{
-    font-size: 10px;
+    font-size: 12px;
+    line-height: 2;
 }
 .petagogies .petagogie1 .droit{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -285,7 +330,7 @@ header .header form button{
 .petagogies .petagogie1 .droit .droit-content1{
     position: absolute;
     display: flex;
-    width: 40%;
+    width: 30%;
     background-color: var(--danger);
     height: 90%;
     border-radius: 20px;
@@ -298,7 +343,7 @@ header .header form button{
     width: 60%;
 } */
 .petagogies .petagogie1 .droit img{
-    width: 40%;
+    width: 30%;
     height: 90%;
     position: absolute;
     transform: translate(-20px, 20px);
@@ -314,7 +359,7 @@ header .header form button{
     align-items: center;
 }
 .petagogies .valeurs .respect1{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -325,15 +370,18 @@ header .header form button{
 }
 .petagogies .valeurs .respect1 .respect-content h3{
     color: var(--danger);
-    font-size: 1.6em;
+    font-size: 2.6em;
     margin-bottom: 20px;
 }
 .petagogies .valeurs .respect1 .respect-content p{
     line-height: 2;
-    font-size: 15px;
+    font-size: 18px;
 }
 .petagogies .valeurs .respect1 .respect-content button{
+    width: 200px;
+    height: 50px;
     margin: 40px 0;
+    font-size: 1.2em;
     font-weight: bold;
     cursor: pointer;
     padding: 10px 30px;
@@ -342,17 +390,17 @@ header .header form button{
     background-color: var(--danger);
 }
 .petagogies .valeurs .respect2{
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 .petagogies .valeurs .respect2 img{
-    width: 100px;
+    width: 150px;
     position: absolute;
-    left: 60px;
-    top: 110px;
+    left: 40px;
+    top: 140px;
 }
 .petagogies .valeurs .respect2 div{
     width: 70%;
@@ -360,7 +408,7 @@ header .header form button{
 .petagogies .valeurs .respect2 div .respect{
     box-shadow: 0 5px 5px var(--grag);
     margin: 20px;
-    padding: 10px;
+    padding:20px 10px;
     width: 90%;
     display: flex;
     justify-content: center;
@@ -369,17 +417,20 @@ header .header form button{
 .petagogies .valeurs .respect2 div .respect h3{
     /* width: 20%;
     height: 20%; */
+    font-size: 1.5em;
     border-radius: 100%;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
+    margin: 10px 20px;
     background-color: var(--pinkpaleWhite);
     color: var(--danger);
 }
 .petagogies .valeurs .respect2 div .respect div p{
-    font-size: 12px;
+    font-size: 15px;
     margin: 5px 0;
 }
-
+.petagogies .valeurs .respect2 div .respect div h4{
+    font-size: 1.2em;
+}
 .petagogies .chiffres{
     margin: 70px 0;
 }
@@ -546,6 +597,14 @@ header .header form button{
     border-radius: 20px;
     box-shadow: 0 2px var(--grag);
 }
+.petagogies .recrutement .left .recrut .offres .postes .poste3 .trait{
+    background-color: var(--danger);
+    width: 20px;
+    padding: 2px;
+    position: absolute;
+    top: 15px;
+    right: 90px;
+}
 .petagogies .recrutement .left .recrut .offres .postes .poste2 .item{
     display: flex;
     /* justify-content: center; */
@@ -580,6 +639,7 @@ header .header form button{
 .petagogies .recrutement .left .recrut .offres .formateurs{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 20px;
 }
 .petagogies .recrutement .left .recrut .offres .formateurs h3{
@@ -723,13 +783,14 @@ footer{
     justify-content: center;
 }
 .footer .item .icon img{
-    width: 60px;
+    width: 40px;
     margin: 10px;
 }
-.footer .item .icon .icone{
-    width: 40px;
-}
-.footer .item img{
+/* .footer .item .icon .icone{
+    width: 50px;
+    height: 45px;
+} */
+.footer .item .logo{
     width: 200px;
 }
 .footer .item h3{
@@ -791,4 +852,104 @@ footer{
 .footer-copy div p img{
     width: 50px;
     margin-top: 10px;
+}
+
+button{
+    cursor: pointer;
+}
+
+/* responsive */
+@media (max-width : 900px) {
+    .header .navbar,select,button{
+        display: none;
+    }
+
+    .header .menu_toggle{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+    }
+    .header .menu_toggle::before{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "";
+        width: 40px;
+        height: 2;
+        border: 1px solid var(--danger);
+        background-color: var(--danger);
+        box-shadow: 0 10px 0  var(--danger);
+        transform: translateY(-10px);
+    }
+    .header .menu_toggle.active::before{
+        transform: translateY(0) rotate(135deg);
+        box-shadow: 0 0 0  var(--danger);
+    }
+    .header .menu_toggle::after{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        content: "";
+        width: 40px;
+        height: 2;
+        background-color: var(--danger);
+        border: 1px solid var(--danger);
+        box-shadow: 0 10px 0  var(--danger);
+        transform: translateY(10px);
+    }
+    .header .menu_toggle.active::after{
+        transform: translateY(0) rotate(-135deg);
+        box-shadow: 0 0 0  var(--danger);
+    }
+    .header .navbar.responsive{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 85px;
+        left: 0;
+        right: 0;
+        background-color: var(--gragWhite);
+        box-shadow: 0 0 2px var(--grag);
+    }
+    #histoire-fabrique{
+        height: 900px;
+    }
+
+    .histoires{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .histoires .left{
+        width: 100%;
+        margin-bottom:90px;
+    }
+    .histoires .left .titre-left{
+        width: 70%;
+        margin-bottom: 50px;
+    }
+    .histoires .left .titre-left p{
+        font-size: 1.5em;
+    }
+    .histoires .right{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .right .histor1{
+        width: 40%;
+    }
+    .header .right .histor2{
+        width: 40%;
+    }
+    
 }
